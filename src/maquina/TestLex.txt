@@ -1,0 +1,64 @@
+program Test3; {programa para teste do lexico}
+var
+   NUMERO  : integer;
+   final   : integer;
+begin  {tente gerar um erro usando um caracter não permitido.. tipo $}
+   NUMERO := 3 * 5 + 7 - 9;
+   if (NUMERO >= 20) and (NUMERO <=90) then
+      NUMERO := 10 / 3;
+   final := NUMERO + 1	  
+end.
+
+{Tabela a ser gerada
+
+TOKEN           CLASSIFICAÇÃO         	    LINHA
+--------------------------------------------------
+program		palavra-resevada		1
+Test3		identiicador			1
+;		delimitador			1
+var		palavra-reservada		2
+NUMERO		identificador			3
+:		delimitador			3
+integer		palavra-resevada		3
+;		delimitador			3
+final		identificador			4
+:		delimitador			4
+integer		identificador			4
+;		delimitador			4
+begin		palavra-reservada		5
+NUMERO		identificador			6
+:=		atribuição			6
+3		inteiro				6
+*		operador-multiplicativo		6
+5		inteiro				6
++		operador-aditivo		6
+7		inteiro				6
+-		operador-aditivo		6
+9		interiro			6
+;		delimitador			6
+if		palavra-reservada		7
+(		delimitador			7
+NUMERO		identificador			7
+>=		operador-relacional		7
+20		inteiro				7
+)		delimitador			7
+and		operador-multiplicativo		7
+(		delimitador			7
+NUMERO		identificador			7
+<=		operador-relacional		7
+90		inteiro				7
+)		delimitador			7
+then		palavra-reservada		7
+NUMERO		identificador			8
+:=		atribuição			8
+10		inteiro				8
+/		operador-multiplicativo		8
+3		inteiro				8
+;		delimitador			8
+final		identificador			9
+:=		atribuição			9
+NUMERO		identificador			9
++		operador-aditivo		9
+1	  	inteiro				9
+end		palavra-reservada		10
+.		delimitador			10

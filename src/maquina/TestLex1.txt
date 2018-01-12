@@ -1,0 +1,22 @@
+program Test3; 
+
+var NUMERO  : integer;
+final : integer;
+
+procedure final (var a : integer);
+begin
+	a := a + 1;
+end;
+begin
+
+   NUMERO := 3 * 5 + 7 - 9;
+   
+	if (NUMERO) and (NUMERO <= 90) then
+
+		NUMERO := 10 / 3;
+
+	final := NUMERO + 1
+   
+
+  
+end.
